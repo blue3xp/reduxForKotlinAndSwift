@@ -72,5 +72,8 @@ struct CounterView: View {
            .onAppear() {
                store.subscribe(countermodel) { $0.select { $0.counterState } }
            }
+           .onDisappear(){
+               store.unsubscribe(countermodel)
+           }
        }
 }
