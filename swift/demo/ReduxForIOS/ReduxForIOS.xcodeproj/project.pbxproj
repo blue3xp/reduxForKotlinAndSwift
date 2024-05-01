@@ -1,0 +1,687 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A420D4F92BCBC9DF001C6ABB /* ReduxForIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D4F82BCBC9DF001C6ABB /* ReduxForIOSApp.swift */; };
+		A420D4FB2BCBC9DF001C6ABB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D4FA2BCBC9DF001C6ABB /* ContentView.swift */; };
+		A420D4FD2BCBC9E1001C6ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A420D4FC2BCBC9E1001C6ABB /* Assets.xcassets */; };
+		A420D5002BCBC9E1001C6ABB /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A420D4FF2BCBC9E1001C6ABB /* Preview Assets.xcassets */; };
+		A420D50A2BCBC9E1001C6ABB /* ReduxForIOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5092BCBC9E1001C6ABB /* ReduxForIOSTests.swift */; };
+		A420D5142BCBC9E1001C6ABB /* ReduxForIOSUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5132BCBC9E1001C6ABB /* ReduxForIOSUITests.swift */; };
+		A420D5162BCBC9E1001C6ABB /* ReduxForIOSUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5152BCBC9E1001C6ABB /* ReduxForIOSUITestsLaunchTests.swift */; };
+		A420D5242BD205BF001C6ABB /* Reducer.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5232BD205BF001C6ABB /* Reducer.swift */; };
+		A420D5262BD206B5001C6ABB /* Action.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5252BD206B5001C6ABB /* Action.swift */; };
+		A420D5282BD23C30001C6ABB /* DispatchingStoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5272BD23C30001C6ABB /* DispatchingStoreType.swift */; };
+		A420D52A2BD23D11001C6ABB /* StoreType.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5292BD23D11001C6ABB /* StoreType.swift */; };
+		A420D52C2BD23D87001C6ABB /* StoreSubscriber.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D52B2BD23D87001C6ABB /* StoreSubscriber.swift */; };
+		A420D52E2BD23F84001C6ABB /* Middleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D52D2BD23F84001C6ABB /* Middleware.swift */; };
+		A420D5322BD2424A001C6ABB /* Subscription.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5312BD2424A001C6ABB /* Subscription.swift */; };
+		A420D53A2BD25029001C6ABB /* CounterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5392BD25029001C6ABB /* CounterView.swift */; };
+		A420D53C2BD2510E001C6ABB /* CounterModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D53B2BD2510E001C6ABB /* CounterModel.swift */; };
+		A420D5462BD25761001C6ABB /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5452BD25761001C6ABB /* Store.swift */; };
+		A420D5482BD25773001C6ABB /* AppStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5472BD25773001C6ABB /* AppStore.swift */; };
+		A420D54C2BD3547C001C6ABB /* Assertions.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5492BD3547C001C6ABB /* Assertions.swift */; };
+		A420D54D2BD3547C001C6ABB /* Synchronized.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D54A2BD3547C001C6ABB /* Synchronized.swift */; };
+		A420D5502BD35AA4001C6ABB /* Thunk.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D54F2BD35AA4001C6ABB /* Thunk.swift */; };
+		A420D5522BD35AD6001C6ABB /* CreateThunkMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5512BD35AD6001C6ABB /* CreateThunkMiddleware.swift */; };
+		A420D5542BD35D69001C6ABB /* CreateLoggerMiddleware.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5532BD35D69001C6ABB /* CreateLoggerMiddleware.swift */; };
+		A420D5562BD396C3001C6ABB /* CounterSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D5552BD396C3001C6ABB /* CounterSlice.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A420D5062BCBC9E1001C6ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A420D4ED2BCBC9DF001C6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A420D4F42BCBC9DF001C6ABB;
+			remoteInfo = ReduxForIOS;
+		};
+		A420D5102BCBC9E1001C6ABB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A420D4ED2BCBC9DF001C6ABB /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A420D4F42BCBC9DF001C6ABB;
+			remoteInfo = ReduxForIOS;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A420D4F52BCBC9DF001C6ABB /* ReduxForIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxForIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A420D4F82BCBC9DF001C6ABB /* ReduxForIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxForIOSApp.swift; sourceTree = "<group>"; };
+		A420D4FA2BCBC9DF001C6ABB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A420D4FC2BCBC9E1001C6ABB /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A420D4FF2BCBC9E1001C6ABB /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		A420D5052BCBC9E1001C6ABB /* ReduxForIOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxForIOSTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A420D5092BCBC9E1001C6ABB /* ReduxForIOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxForIOSTests.swift; sourceTree = "<group>"; };
+		A420D50F2BCBC9E1001C6ABB /* ReduxForIOSUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReduxForIOSUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A420D5132BCBC9E1001C6ABB /* ReduxForIOSUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxForIOSUITests.swift; sourceTree = "<group>"; };
+		A420D5152BCBC9E1001C6ABB /* ReduxForIOSUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxForIOSUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		A420D5232BD205BF001C6ABB /* Reducer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reducer.swift; sourceTree = "<group>"; };
+		A420D5252BD206B5001C6ABB /* Action.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Action.swift; sourceTree = "<group>"; };
+		A420D5272BD23C30001C6ABB /* DispatchingStoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DispatchingStoreType.swift; sourceTree = "<group>"; };
+		A420D5292BD23D11001C6ABB /* StoreType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreType.swift; sourceTree = "<group>"; };
+		A420D52B2BD23D87001C6ABB /* StoreSubscriber.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoreSubscriber.swift; sourceTree = "<group>"; };
+		A420D52D2BD23F84001C6ABB /* Middleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middleware.swift; sourceTree = "<group>"; };
+		A420D5312BD2424A001C6ABB /* Subscription.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Subscription.swift; sourceTree = "<group>"; };
+		A420D5392BD25029001C6ABB /* CounterView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterView.swift; sourceTree = "<group>"; };
+		A420D53B2BD2510E001C6ABB /* CounterModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterModel.swift; sourceTree = "<group>"; };
+		A420D5452BD25761001C6ABB /* Store.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		A420D5472BD25773001C6ABB /* AppStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AppStore.swift; path = ReduxForIOS/AppStore.swift; sourceTree = SOURCE_ROOT; };
+		A420D5492BD3547C001C6ABB /* Assertions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Assertions.swift; sourceTree = "<group>"; };
+		A420D54A2BD3547C001C6ABB /* Synchronized.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Synchronized.swift; sourceTree = "<group>"; };
+		A420D54F2BD35AA4001C6ABB /* Thunk.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Thunk.swift; sourceTree = "<group>"; };
+		A420D5512BD35AD6001C6ABB /* CreateThunkMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateThunkMiddleware.swift; sourceTree = "<group>"; };
+		A420D5532BD35D69001C6ABB /* CreateLoggerMiddleware.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateLoggerMiddleware.swift; sourceTree = "<group>"; };
+		A420D5552BD396C3001C6ABB /* CounterSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CounterSlice.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A420D4F22BCBC9DF001C6ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420D5022BCBC9E1001C6ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420D50C2BCBC9E1001C6ABB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A420D4EC2BCBC9DF001C6ABB = {
+			isa = PBXGroup;
+			children = (
+				A420D4F72BCBC9DF001C6ABB /* ReduxForIOS */,
+				A420D5082BCBC9E1001C6ABB /* ReduxForIOSTests */,
+				A420D5122BCBC9E1001C6ABB /* ReduxForIOSUITests */,
+				A420D4F62BCBC9DF001C6ABB /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A420D4F62BCBC9DF001C6ABB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A420D4F52BCBC9DF001C6ABB /* ReduxForIOS.app */,
+				A420D5052BCBC9E1001C6ABB /* ReduxForIOSTests.xctest */,
+				A420D50F2BCBC9E1001C6ABB /* ReduxForIOSUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A420D4F72BCBC9DF001C6ABB /* ReduxForIOS */ = {
+			isa = PBXGroup;
+			children = (
+				A420D5382BD24944001C6ABB /* counter */,
+				A420D5222BD2035D001C6ABB /* redux */,
+				A420D4F82BCBC9DF001C6ABB /* ReduxForIOSApp.swift */,
+				A420D4FA2BCBC9DF001C6ABB /* ContentView.swift */,
+				A420D4FC2BCBC9E1001C6ABB /* Assets.xcassets */,
+				A420D4FE2BCBC9E1001C6ABB /* Preview Content */,
+				A420D5472BD25773001C6ABB /* AppStore.swift */,
+			);
+			path = ReduxForIOS;
+			sourceTree = "<group>";
+		};
+		A420D4FE2BCBC9E1001C6ABB /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				A420D4FF2BCBC9E1001C6ABB /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		A420D5082BCBC9E1001C6ABB /* ReduxForIOSTests */ = {
+			isa = PBXGroup;
+			children = (
+				A420D5092BCBC9E1001C6ABB /* ReduxForIOSTests.swift */,
+			);
+			path = ReduxForIOSTests;
+			sourceTree = "<group>";
+		};
+		A420D5122BCBC9E1001C6ABB /* ReduxForIOSUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A420D5132BCBC9E1001C6ABB /* ReduxForIOSUITests.swift */,
+				A420D5152BCBC9E1001C6ABB /* ReduxForIOSUITestsLaunchTests.swift */,
+			);
+			path = ReduxForIOSUITests;
+			sourceTree = "<group>";
+		};
+		A420D5222BD2035D001C6ABB /* redux */ = {
+			isa = PBXGroup;
+			children = (
+				A420D54E2BD3549B001C6ABB /* middleware */,
+				A420D54B2BD3547C001C6ABB /* utils */,
+				A420D5232BD205BF001C6ABB /* Reducer.swift */,
+				A420D5252BD206B5001C6ABB /* Action.swift */,
+				A420D5272BD23C30001C6ABB /* DispatchingStoreType.swift */,
+				A420D5292BD23D11001C6ABB /* StoreType.swift */,
+				A420D5452BD25761001C6ABB /* Store.swift */,
+				A420D52B2BD23D87001C6ABB /* StoreSubscriber.swift */,
+				A420D52D2BD23F84001C6ABB /* Middleware.swift */,
+				A420D5312BD2424A001C6ABB /* Subscription.swift */,
+			);
+			path = redux;
+			sourceTree = "<group>";
+		};
+		A420D5382BD24944001C6ABB /* counter */ = {
+			isa = PBXGroup;
+			children = (
+				A420D5392BD25029001C6ABB /* CounterView.swift */,
+				A420D53B2BD2510E001C6ABB /* CounterModel.swift */,
+				A420D5552BD396C3001C6ABB /* CounterSlice.swift */,
+			);
+			path = counter;
+			sourceTree = "<group>";
+		};
+		A420D54B2BD3547C001C6ABB /* utils */ = {
+			isa = PBXGroup;
+			children = (
+				A420D5492BD3547C001C6ABB /* Assertions.swift */,
+				A420D54A2BD3547C001C6ABB /* Synchronized.swift */,
+			);
+			path = utils;
+			sourceTree = "<group>";
+		};
+		A420D54E2BD3549B001C6ABB /* middleware */ = {
+			isa = PBXGroup;
+			children = (
+				A420D54F2BD35AA4001C6ABB /* Thunk.swift */,
+				A420D5512BD35AD6001C6ABB /* CreateThunkMiddleware.swift */,
+				A420D5532BD35D69001C6ABB /* CreateLoggerMiddleware.swift */,
+			);
+			path = middleware;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A420D4F42BCBC9DF001C6ABB /* ReduxForIOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A420D5192BCBC9E1001C6ABB /* Build configuration list for PBXNativeTarget "ReduxForIOS" */;
+			buildPhases = (
+				A420D4F12BCBC9DF001C6ABB /* Sources */,
+				A420D4F22BCBC9DF001C6ABB /* Frameworks */,
+				A420D4F32BCBC9DF001C6ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ReduxForIOS;
+			productName = ReduxForIOS;
+			productReference = A420D4F52BCBC9DF001C6ABB /* ReduxForIOS.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A420D5042BCBC9E1001C6ABB /* ReduxForIOSTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A420D51C2BCBC9E1001C6ABB /* Build configuration list for PBXNativeTarget "ReduxForIOSTests" */;
+			buildPhases = (
+				A420D5012BCBC9E1001C6ABB /* Sources */,
+				A420D5022BCBC9E1001C6ABB /* Frameworks */,
+				A420D5032BCBC9E1001C6ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A420D5072BCBC9E1001C6ABB /* PBXTargetDependency */,
+			);
+			name = ReduxForIOSTests;
+			productName = ReduxForIOSTests;
+			productReference = A420D5052BCBC9E1001C6ABB /* ReduxForIOSTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A420D50E2BCBC9E1001C6ABB /* ReduxForIOSUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A420D51F2BCBC9E1001C6ABB /* Build configuration list for PBXNativeTarget "ReduxForIOSUITests" */;
+			buildPhases = (
+				A420D50B2BCBC9E1001C6ABB /* Sources */,
+				A420D50C2BCBC9E1001C6ABB /* Frameworks */,
+				A420D50D2BCBC9E1001C6ABB /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A420D5112BCBC9E1001C6ABB /* PBXTargetDependency */,
+			);
+			name = ReduxForIOSUITests;
+			productName = ReduxForIOSUITests;
+			productReference = A420D50F2BCBC9E1001C6ABB /* ReduxForIOSUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A420D4ED2BCBC9DF001C6ABB /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1530;
+				LastUpgradeCheck = 1530;
+				TargetAttributes = {
+					A420D4F42BCBC9DF001C6ABB = {
+						CreatedOnToolsVersion = 15.3;
+					};
+					A420D5042BCBC9E1001C6ABB = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A420D4F42BCBC9DF001C6ABB;
+					};
+					A420D50E2BCBC9E1001C6ABB = {
+						CreatedOnToolsVersion = 15.3;
+						TestTargetID = A420D4F42BCBC9DF001C6ABB;
+					};
+				};
+			};
+			buildConfigurationList = A420D4F02BCBC9DF001C6ABB /* Build configuration list for PBXProject "ReduxForIOS" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A420D4EC2BCBC9DF001C6ABB;
+			productRefGroup = A420D4F62BCBC9DF001C6ABB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A420D4F42BCBC9DF001C6ABB /* ReduxForIOS */,
+				A420D5042BCBC9E1001C6ABB /* ReduxForIOSTests */,
+				A420D50E2BCBC9E1001C6ABB /* ReduxForIOSUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A420D4F32BCBC9DF001C6ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420D5002BCBC9E1001C6ABB /* Preview Assets.xcassets in Resources */,
+				A420D4FD2BCBC9E1001C6ABB /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420D5032BCBC9E1001C6ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420D50D2BCBC9E1001C6ABB /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A420D4F12BCBC9DF001C6ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420D4FB2BCBC9DF001C6ABB /* ContentView.swift in Sources */,
+				A420D5522BD35AD6001C6ABB /* CreateThunkMiddleware.swift in Sources */,
+				A420D52E2BD23F84001C6ABB /* Middleware.swift in Sources */,
+				A420D5462BD25761001C6ABB /* Store.swift in Sources */,
+				A420D5262BD206B5001C6ABB /* Action.swift in Sources */,
+				A420D54D2BD3547C001C6ABB /* Synchronized.swift in Sources */,
+				A420D5502BD35AA4001C6ABB /* Thunk.swift in Sources */,
+				A420D5322BD2424A001C6ABB /* Subscription.swift in Sources */,
+				A420D5482BD25773001C6ABB /* AppStore.swift in Sources */,
+				A420D52C2BD23D87001C6ABB /* StoreSubscriber.swift in Sources */,
+				A420D4F92BCBC9DF001C6ABB /* ReduxForIOSApp.swift in Sources */,
+				A420D53C2BD2510E001C6ABB /* CounterModel.swift in Sources */,
+				A420D5542BD35D69001C6ABB /* CreateLoggerMiddleware.swift in Sources */,
+				A420D53A2BD25029001C6ABB /* CounterView.swift in Sources */,
+				A420D5562BD396C3001C6ABB /* CounterSlice.swift in Sources */,
+				A420D5242BD205BF001C6ABB /* Reducer.swift in Sources */,
+				A420D5282BD23C30001C6ABB /* DispatchingStoreType.swift in Sources */,
+				A420D52A2BD23D11001C6ABB /* StoreType.swift in Sources */,
+				A420D54C2BD3547C001C6ABB /* Assertions.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420D5012BCBC9E1001C6ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420D50A2BCBC9E1001C6ABB /* ReduxForIOSTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A420D50B2BCBC9E1001C6ABB /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A420D5142BCBC9E1001C6ABB /* ReduxForIOSUITests.swift in Sources */,
+				A420D5162BCBC9E1001C6ABB /* ReduxForIOSUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A420D5072BCBC9E1001C6ABB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A420D4F42BCBC9DF001C6ABB /* ReduxForIOS */;
+			targetProxy = A420D5062BCBC9E1001C6ABB /* PBXContainerItemProxy */;
+		};
+		A420D5112BCBC9E1001C6ABB /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A420D4F42BCBC9DF001C6ABB /* ReduxForIOS */;
+			targetProxy = A420D5102BCBC9E1001C6ABB /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		A420D5172BCBC9E1001C6ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A420D5182BCBC9E1001C6ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A420D51A2BCBC9E1001C6ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ReduxForIOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ReduxForIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		A420D51B2BCBC9E1001C6ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"ReduxForIOS/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ReduxForIOS;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		A420D51D2BCBC9E1001C6ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ReduxForIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxForIOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReduxForIOS";
+			};
+			name = Debug;
+		};
+		A420D51E2BCBC9E1001C6ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ReduxForIOSTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ReduxForIOS.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/ReduxForIOS";
+			};
+			name = Release;
+		};
+		A420D5202BCBC9E1001C6ABB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ReduxForIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReduxForIOS;
+			};
+			name = Debug;
+		};
+		A420D5212BCBC9E1001C6ABB /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.demo.ReduxForIOSUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ReduxForIOS;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A420D4F02BCBC9DF001C6ABB /* Build configuration list for PBXProject "ReduxForIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420D5172BCBC9E1001C6ABB /* Debug */,
+				A420D5182BCBC9E1001C6ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A420D5192BCBC9E1001C6ABB /* Build configuration list for PBXNativeTarget "ReduxForIOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420D51A2BCBC9E1001C6ABB /* Debug */,
+				A420D51B2BCBC9E1001C6ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A420D51C2BCBC9E1001C6ABB /* Build configuration list for PBXNativeTarget "ReduxForIOSTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420D51D2BCBC9E1001C6ABB /* Debug */,
+				A420D51E2BCBC9E1001C6ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A420D51F2BCBC9E1001C6ABB /* Build configuration list for PBXNativeTarget "ReduxForIOSUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A420D5202BCBC9E1001C6ABB /* Debug */,
+				A420D5212BCBC9E1001C6ABB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A420D4ED2BCBC9DF001C6ABB /* Project object */;
+}
