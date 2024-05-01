@@ -57,6 +57,9 @@ class CounterActivity : AppCompatActivity() {
             select({it.counterState.counter}){
                 binding.txtLabel.text = "Clicked: ${state.counterState.counter} times"
             }
+            select({it.counterState.response}){
+                binding.txtResponse.text = "response: ${state.counterState.response} "
+            }
         }
 
         binding.btnIncrement.setOnClickListener { store.dispatch(Increment()) }
@@ -64,7 +67,7 @@ class CounterActivity : AppCompatActivity() {
 //        binding.btnAsync.setOnClickListener { incrementAsync() }
         binding.btnAsync.setOnClickListener { incrementAsync2() }
         binding.btnIncrementIfOdd.setOnClickListener { incrementIfOdd() }
-        binding.btnSend.setOnClickListener{store.dispatch(networkRequest())}
+        binding.btnSend.setOnClickListener{store.dispatch(networkRequest2())}
     }
 
     private fun render(state: CounterState) {
@@ -110,6 +113,17 @@ class CounterActivity : AppCompatActivity() {
             delay(2000L)
             withContext(Dispatchers.Main) {
                 dispatch(LoadingComplete())
+            }
+        }
+    }
+
+    fun networkRequest2(): Thunk<CounterState> = { dispatch, getState, extraArg ->
+        dispatch(StartLoading())
+        GlobalScope.launch {
+            delay(2000L)
+            withContext(Dispatchers.Main) {
+                dispatch(LoadingComplete())
+                dispatch(FetchReponse("<html></html>", error = ""))
             }
         }
     }

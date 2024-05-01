@@ -4,13 +4,17 @@ import com.example.reduxforandroid.redux.Reducer
 
 data class CounterState(
     val counter: Int = 0,
-    val isLoading: Boolean = false
+    val isLoading: Boolean = false,
+    val response:String = "",
+    val error: String = "",
 )
 
 class Increment
 class Decrement
 class StartLoading
 class LoadingComplete
+
+data class FetchReponse(val reponse: String, val error: String)
 
 /**
  * This is a reducer, a pure function with (state, action) -> state signature.
@@ -37,6 +41,10 @@ val counterReducer: Reducer<CounterState> = { state, action ->
         is LoadingComplete -> state.copy(isLoading = false)
         is Increment -> state.copy(counter = state.counter + 1)
         is Decrement -> state.copy(counter = state.counter - 1)
+        is FetchReponse -> state.copy(
+            response = action.reponse,
+            error = action.error
+        )
         else -> state
     }
 }

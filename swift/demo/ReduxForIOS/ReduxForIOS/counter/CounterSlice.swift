@@ -10,6 +10,8 @@ import Foundation
 struct CounterState : Equatable,CustomStringConvertible {
     var counter: Int = 0
     var isLoading: Bool = false
+    var response: String = ""
+    var error: String = ""
     var description: String {
             return "counter: \(counter) isLoading: \(isLoading)"
         }
@@ -19,6 +21,10 @@ struct CounterActionIncrease: Action {}
 struct CounterActionDecrease: Action {}
 struct CounterStartLoading: Action {}
 struct CounterLoadingComplete: Action {}
+struct CounterResponse: Action {
+    var response:String = ""
+    var error: String = ""
+}
 
 
 func counterReducer(action: Action, state: CounterState?) -> CounterState {
@@ -32,6 +38,10 @@ func counterReducer(action: Action, state: CounterState?) -> CounterState {
         state.isLoading = true
     case _ as CounterLoadingComplete:
         state.isLoading = false
+    case _ as CounterLoadingComplete:
+        state.isLoading = false
+    case let action as CounterResponse:
+        state.response = action.response
     default:
         break
     }

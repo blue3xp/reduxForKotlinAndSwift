@@ -64,9 +64,21 @@ struct CounterView: View {
                                }
                            }
                        }
-                   store.dispatch(networkRequest)
+                   let networkRequest2 = Thunk<AppState>  { dispatch, getState in
+                           dispatch(CounterStartLoading())
+                           DispatchQueue.global().async {
+                               Thread.sleep(forTimeInterval: 2)
+                               DispatchQueue.main.async {
+                                   dispatch(CounterLoadingComplete())
+                                   dispatch(CounterResponse(response: "<html></html>",error:""))
+                               }
+                           }
+                       }
+                   store.dispatch(networkRequest2)
                })
-               
+               Spacer()
+               Text("reponse:\(countermodel.response)")
+                   .padding()
            }
            .padding()
            .onAppear() {
