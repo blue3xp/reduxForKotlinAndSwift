@@ -69,4 +69,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="mock request" />
+
+    <EditText
+        android:id="@+id/edit_input_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:hint="input number"
+        android:inputType="number"/>
+    <Button
+        android:id="@+id/btn_add_input"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="add input" />
 </LinearLayout>

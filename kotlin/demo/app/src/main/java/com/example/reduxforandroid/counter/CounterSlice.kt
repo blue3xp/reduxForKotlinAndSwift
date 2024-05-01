@@ -9,6 +9,8 @@ data class CounterState(
 
 class Increment
 class Decrement
+
+data class AddNumber(val num: Int)
 class StartLoading
 class LoadingComplete
 
@@ -37,6 +39,7 @@ val counterReducer: Reducer<CounterState> = { state, action ->
         is LoadingComplete -> state.copy(isLoading = false)
         is Increment -> state.copy(counter = state.counter + 1)
         is Decrement -> state.copy(counter = state.counter - 1)
+        is AddNumber -> state.copy(counter = state.counter + action.num )
         else -> state
     }
 }

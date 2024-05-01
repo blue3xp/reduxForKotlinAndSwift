@@ -19,6 +19,9 @@ struct CounterActionIncrease: Action {}
 struct CounterActionDecrease: Action {}
 struct CounterStartLoading: Action {}
 struct CounterLoadingComplete: Action {}
+struct CounterAddNum: Action {
+    var input:Int = 0
+}
 
 
 func counterReducer(action: Action, state: CounterState?) -> CounterState {
@@ -32,6 +35,8 @@ func counterReducer(action: Action, state: CounterState?) -> CounterState {
         state.isLoading = true
     case _ as CounterLoadingComplete:
         state.isLoading = false
+    case let action as CounterAddNum:
+        state.counter = state.counter + action.input
     default:
         break
     }

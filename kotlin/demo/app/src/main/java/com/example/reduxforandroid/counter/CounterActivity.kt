@@ -65,6 +65,13 @@ class CounterActivity : AppCompatActivity() {
         binding.btnAsync.setOnClickListener { incrementAsync2() }
         binding.btnIncrementIfOdd.setOnClickListener { incrementIfOdd() }
         binding.btnSend.setOnClickListener{store.dispatch(networkRequest())}
+
+        fun onBtnSendClicked() {
+            var tmp = binding.editInputNum.text.toString();
+            store.dispatch(AddNumber(tmp.toInt()))
+        }
+
+        binding.btnAddInput.setOnClickListener { onBtnSendClicked() }
     }
 
     private fun render(state: CounterState) {
