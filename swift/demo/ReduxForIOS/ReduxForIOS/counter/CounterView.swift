@@ -41,6 +41,12 @@ struct CounterView: View {
                    }
                })
                Divider()
+               Button("Double if odd", action: {
+                   if (store.state.counterState.counter % 2 == 0) {
+                       store.dispatch(CounterDouble())
+                   }
+               })
+               Divider()
                Button("Async Increment", action: {
 //                   DispatchQueue.main.asyncAfter(deadline: .now() + 1.0) {
 //                           store.dispatch(CounterActionIncrease())

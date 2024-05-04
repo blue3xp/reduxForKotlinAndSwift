@@ -64,6 +64,7 @@ class CounterActivity : AppCompatActivity() {
 //        binding.btnAsync.setOnClickListener { incrementAsync() }
         binding.btnAsync.setOnClickListener { incrementAsync2() }
         binding.btnIncrementIfOdd.setOnClickListener { incrementIfOdd() }
+        binding.btnDoubleIfEven.setOnClickListener { doubleIfEven() }
         binding.btnSend.setOnClickListener{store.dispatch(networkRequest())}
     }
 
@@ -75,6 +76,12 @@ class CounterActivity : AppCompatActivity() {
     private fun incrementIfOdd() {
         if (store.state.counterState.counter % 2 != 0) {
             store.dispatch(Increment())
+        }
+    }
+
+    private fun doubleIfEven() {
+        if (store.state.counterState.counter % 2 == 0) {
+            store.dispatch(Double())
         }
     }
 

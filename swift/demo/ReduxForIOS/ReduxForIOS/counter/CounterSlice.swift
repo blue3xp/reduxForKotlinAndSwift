@@ -19,6 +19,7 @@ struct CounterActionIncrease: Action {}
 struct CounterActionDecrease: Action {}
 struct CounterStartLoading: Action {}
 struct CounterLoadingComplete: Action {}
+struct CounterDouble: Action {}
 
 
 func counterReducer(action: Action, state: CounterState?) -> CounterState {
@@ -28,6 +29,8 @@ func counterReducer(action: Action, state: CounterState?) -> CounterState {
         state.counter += 1
     case _ as CounterActionDecrease:
         state.counter -= 1
+    case _ as CounterDouble:
+        state.counter = state.counter * 2
     case _ as CounterStartLoading:
         state.isLoading = true
     case _ as CounterLoadingComplete:

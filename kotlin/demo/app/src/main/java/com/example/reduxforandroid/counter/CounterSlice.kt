@@ -12,6 +12,8 @@ class Decrement
 class StartLoading
 class LoadingComplete
 
+class Double
+
 /**
  * This is a reducer, a pure function with (state, action) -> state signature.
  * It describes how an action transforms the state into the next state.
@@ -37,6 +39,7 @@ val counterReducer: Reducer<CounterState> = { state, action ->
         is LoadingComplete -> state.copy(isLoading = false)
         is Increment -> state.copy(counter = state.counter + 1)
         is Decrement -> state.copy(counter = state.counter - 1)
+        is Double -> state.copy(counter = state.counter * 2)
         else -> state
     }
 }

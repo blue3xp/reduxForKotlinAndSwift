@@ -59,6 +59,12 @@
         android:text="Increment if odd" />
 
     <Button
+        android:id="@+id/btn_double_if_even"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Double if even" />
+
+    <Button
         android:id="@+id/btn_async"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
