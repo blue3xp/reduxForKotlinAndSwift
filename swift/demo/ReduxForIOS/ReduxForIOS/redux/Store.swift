@@ -14,6 +14,8 @@
  argument.
  */
 open class Store<State>: StoreType {
+    
+    
 
     typealias SubscriptionType = SubscriptionBox<State>
 
@@ -176,42 +178,10 @@ open class Store<State>: StoreType {
         dispatchFunction(action)
     }
 
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
-    open func dispatch(_ actionCreatorProvider: @escaping ActionCreator) {
-        if let action = actionCreatorProvider(state, self) {
-            dispatch(action)
-        }
-    }
-
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
-    open func dispatch(_ asyncActionCreatorProvider: @escaping AsyncActionCreator) {
-        dispatch(asyncActionCreatorProvider, callback: nil)
-    }
-
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
-    open func dispatch(_ actionCreatorProvider: @escaping AsyncActionCreator,
-                       callback: DispatchCallback?) {
-        actionCreatorProvider(state, self) { actionProvider in
-            let action = actionProvider(self.state, self)
-
-            if let action = action {
-                self.dispatch(action)
-                callback?(self.state)
-            }
-        }
-    }
 
     public typealias DispatchCallback = (State) -> Void
 
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
-    public typealias ActionCreator = (_ state: State, _ store: Store) -> Action?
 
-    @available(*, deprecated, message: "Deprecated in favor of https://github.com/ReSwift/ReSwift-Thunk")
-    public typealias AsyncActionCreator = (
-        _ state: State,
-        _ store: Store,
-        _ actionCreatorCallback: @escaping ((ActionCreator) -> Void)
-    ) -> Void
 }
 
 // MARK: Skip Repeats for Equatable States

@@ -107,13 +107,13 @@ public protocol StoreType: DispatchingStoreType {
      store.dispatch( noteActionCreator.deleteNote(3) )
      ```
      */
-    func dispatch(_ actionCreator: ActionCreator)
+//    func dispatch(_ actionCreator: ActionCreator)
 
     /**
      Dispatches an async action creator to the store. An async action creator generates an
      action creator asynchronously.
      */
-    func dispatch(_ asyncActionCreator: AsyncActionCreator)
+//    func dispatch(_ asyncActionCreator: AsyncActionCreator)
 
     /**
      Dispatches an async action creator to the store. An async action creator generates an
@@ -126,7 +126,7 @@ public protocol StoreType: DispatchingStoreType {
      - Note: If the ActionCreator does not dispatch an action, the callback block will never
      be called
      */
-    func dispatch(_ asyncActionCreator: AsyncActionCreator, callback: DispatchCallback?)
+//    func dispatch(_ asyncActionCreator: AsyncActionCreator, callback: DispatchCallback?)
 
     /**
      An optional callback that can be passed to the `dispatch` method.
