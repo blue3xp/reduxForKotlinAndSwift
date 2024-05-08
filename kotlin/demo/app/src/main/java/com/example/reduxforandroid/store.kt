@@ -8,39 +8,52 @@ import com.example.reduxforandroid.redux.combineReducers
 import com.example.reduxforandroid.redux.createStore
 import com.example.reduxforandroid.redux.middleware.createLoggerMiddleware
 import com.example.reduxforandroid.redux.middleware.createThunkMiddleware
+import com.example.reduxforandroid.shoppingcart.domain.Product
+import com.example.reduxforandroid.shoppingcart.domain.ShoppingCart
+import com.example.reduxforandroid.shoppingcart.domain.productEntityReducer
+import com.example.reduxforandroid.shoppingcart.domain.shoppingCartEntityReducer
 import com.example.reduxforandroid.todos.domain.DataListReducer
 import com.example.reduxforandroid.todos.domain.ToDoState
 import com.example.reduxforandroid.todos.domain.toDoRootReducer
 import com.example.reduxforandroid.todos.domain.visibilityFilterReducer
 
+data class Entity<State>(
+    val byId: Map<String, State>,
+    val allIds: List<String>
+)
+
 /**
  * Entire state tree for the app.
  */
+data class Entities(
+    val productEntity: Entity<Product> = Entity(byId = mapOf(),
+        allIds = listOf()),
+    val shoppingCartEntity: Entity<ShoppingCart> = Entity(byId = mapOf(
+        "shoppingCart1" to ShoppingCart(
+            id = "shoppingCart1",
+            items = listOf(),
+        ),
+    ),
+        allIds = listOf("shoppingCart1"))
+)
 data class AppState(
     val counterState: CounterState = CounterState(),
-    val toDoState: ToDoState = ToDoState()
+    val toDoState: ToDoState = ToDoState(),
+    val entities: Entities = Entities()
 )
 
-//class AppDynamicState {
-//    private val properties = mutableMapOf<String, Any>()
-//
-//    fun setProperty(name: String, value: Any) {
-//        properties[name] = value
-//    }
-//
-//    fun getProperty(name: String): Any? {
-//        return properties[name]
-//    }
-//
-//    fun removeProperty(name: String) {
-//        properties.remove(name)
-//    }
-//}
+val entitiesRootReducer: Reducer<Entities> = { state, action ->
+    Entities(
+        productEntity = productEntityReducer(state.productEntity, action),
+        shoppingCartEntity = shoppingCartEntityReducer(state.shoppingCartEntity, action)
+    )
+}
 
 val appReducer: Reducer<AppState> = { state, action ->
     AppState(
         counterState = counterReducer(state.counterState, action),
-        toDoState = toDoRootReducer(state.toDoState, action)
+        toDoState = toDoRootReducer(state.toDoState, action),
+        entities = entitiesRootReducer(state.entities, action)
     )
 }
 

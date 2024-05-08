@@ -8,9 +8,9 @@ public fun <State> createLoggerMiddleware(extraArgument: Any? = null): Middlewar
     { store ->
         { next: Dispatcher ->
             { action: Any ->
-                Log.d("Redux", "dispatching $action") // 打印日志消息
+//                Log.d("Redux", "dispatching $action") // 打印日志消息
                 next(action)
-                Log.d("Redux", "next state ${store.getState()}") // 打印日志消息
+//                Log.d("Redux", "next state ${store.getState()}") // 打印日志消息
             }
         }
     }

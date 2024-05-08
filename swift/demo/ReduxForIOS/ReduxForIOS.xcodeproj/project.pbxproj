@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A41534C22BEA06BC00E923F7 /* CartSlice.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41534C12BEA06BC00E923F7 /* CartSlice.swift */; };
+		A41534C42BEB004800E923F7 /* ShoppingCartTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = A41534C32BEB004800E923F7 /* ShoppingCartTest.swift */; };
 		A420D4F92BCBC9DF001C6ABB /* ReduxForIOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D4F82BCBC9DF001C6ABB /* ReduxForIOSApp.swift */; };
 		A420D4FB2BCBC9DF001C6ABB /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A420D4FA2BCBC9DF001C6ABB /* ContentView.swift */; };
 		A420D4FD2BCBC9E1001C6ABB /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A420D4FC2BCBC9E1001C6ABB /* Assets.xcassets */; };
@@ -51,6 +53,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A41534C12BEA06BC00E923F7 /* CartSlice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CartSlice.swift; sourceTree = "<group>"; };
+		A41534C32BEB004800E923F7 /* ShoppingCartTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShoppingCartTest.swift; sourceTree = "<group>"; };
 		A420D4F52BCBC9DF001C6ABB /* ReduxForIOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ReduxForIOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A420D4F82BCBC9DF001C6ABB /* ReduxForIOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReduxForIOSApp.swift; sourceTree = "<group>"; };
 		A420D4FA2BCBC9DF001C6ABB /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -105,6 +109,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		A41534C02BEA069100E923F7 /* shoppingCart */ = {
+			isa = PBXGroup;
+			children = (
+				A41534C12BEA06BC00E923F7 /* CartSlice.swift */,
+			);
+			path = shoppingCart;
+			sourceTree = "<group>";
+		};
 		A420D4EC2BCBC9DF001C6ABB = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +140,7 @@
 		A420D4F72BCBC9DF001C6ABB /* ReduxForIOS */ = {
 			isa = PBXGroup;
 			children = (
+				A41534C02BEA069100E923F7 /* shoppingCart */,
 				A420D5382BD24944001C6ABB /* counter */,
 				A420D5222BD2035D001C6ABB /* redux */,
 				A420D4F82BCBC9DF001C6ABB /* ReduxForIOSApp.swift */,
@@ -151,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				A420D5092BCBC9E1001C6ABB /* ReduxForIOSTests.swift */,
+				A41534C32BEB004800E923F7 /* ShoppingCartTest.swift */,
 			);
 			path = ReduxForIOSTests;
 			sourceTree = "<group>";
@@ -348,6 +362,7 @@
 				A420D54D2BD3547C001C6ABB /* Synchronized.swift in Sources */,
 				A420D5502BD35AA4001C6ABB /* Thunk.swift in Sources */,
 				A420D5322BD2424A001C6ABB /* Subscription.swift in Sources */,
+				A41534C22BEA06BC00E923F7 /* CartSlice.swift in Sources */,
 				A420D5482BD25773001C6ABB /* AppStore.swift in Sources */,
 				A420D52C2BD23D87001C6ABB /* StoreSubscriber.swift in Sources */,
 				A420D4F92BCBC9DF001C6ABB /* ReduxForIOSApp.swift in Sources */,
@@ -367,6 +382,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A420D50A2BCBC9E1001C6ABB /* ReduxForIOSTests.swift in Sources */,
+				A41534C42BEB004800E923F7 /* ShoppingCartTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

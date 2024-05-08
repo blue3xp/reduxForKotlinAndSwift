@@ -7,16 +7,49 @@
 
 import Foundation
 
+struct Entity<State> : CustomStringConvertible{
+    let byId: [String: State]
+    let allIds: [String]
+    var description: String {
+        return "byId: \(byId) allIds:\(allIds)"
+    }
+}
+
+struct Entities : CustomStringConvertible{
+    
+    let productEntity: Entity<Product>
+    let shoppingCartEntity: Entity<ShoppingCart>
+    
+    init(productEntity: Entity<Product> = Entity(byId: [:], allIds: []),
+         shoppingCartEntity: Entity<ShoppingCart> = Entity(byId: ["shoppingCart1": ShoppingCart(id: "shoppingCart1", items: [])], allIds: ["shoppingCart1"])) {
+        self.productEntity = productEntity
+        self.shoppingCartEntity = shoppingCartEntity
+    }
+    
+    var description: String {
+        return "productEntity: \(productEntity) shoppingCartEntity:\(shoppingCartEntity)"
+    }
+}
+
 struct AppState: CustomStringConvertible{
     var counterState: CounterState = CounterState()
+    var entities: Entities = Entities()
     var description: String {
-            return "counterState: \(counterState)"
+            return "counterState: \(counterState) entities:\(entities)"
         }
+}
+
+func entitiesRootReducer(action: Action, state: Entities?) -> Entities {
+    Entities(
+        productEntity: productEntityReducer(action: action, state: state?.productEntity),
+        shoppingCartEntity:shoppingCartEntityReducer(action: action, state: state?.shoppingCartEntity)
+    )
 }
 
 func AppReducer(action: Action, state: AppState?) -> AppState {
     AppState(
-        counterState: counterReducer(action: action, state: state?.counterState)
+        counterState: counterReducer(action: action, state: state?.counterState),
+        entities:entitiesRootReducer(action: action, state: state?.entities)
     )
 }
 
