@@ -33,6 +33,7 @@ struct Entities : CustomStringConvertible{
 
 struct AppState: CustomStringConvertible{
     var counterState: CounterState = CounterState()
+    var userState: UserState = UserState()
     var entities: Entities = Entities()
     var description: String {
             return "counterState: \(counterState) entities:\(entities)"
@@ -49,6 +50,7 @@ func entitiesRootReducer(action: Action, state: Entities?) -> Entities {
 func AppReducer(action: Action, state: AppState?) -> AppState {
     AppState(
         counterState: counterReducer(action: action, state: state?.counterState),
+        userState: userReducer(action: action, state: state?.userState),
         entities:entitiesRootReducer(action: action, state: state?.entities)
     )
 }

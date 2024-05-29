@@ -10,8 +10,10 @@ import com.example.reduxforandroid.redux.middleware.createLoggerMiddleware
 import com.example.reduxforandroid.redux.middleware.createThunkMiddleware
 import com.example.reduxforandroid.shoppingcart.domain.Product
 import com.example.reduxforandroid.shoppingcart.domain.ShoppingCart
+import com.example.reduxforandroid.shoppingcart.domain.UserState
 import com.example.reduxforandroid.shoppingcart.domain.productEntityReducer
 import com.example.reduxforandroid.shoppingcart.domain.shoppingCartEntityReducer
+import com.example.reduxforandroid.shoppingcart.domain.userReducer
 import com.example.reduxforandroid.todos.domain.DataListReducer
 import com.example.reduxforandroid.todos.domain.ToDoState
 import com.example.reduxforandroid.todos.domain.toDoRootReducer
@@ -39,6 +41,7 @@ data class Entities(
 data class AppState(
     val counterState: CounterState = CounterState(),
     val toDoState: ToDoState = ToDoState(),
+    val userState: UserState = UserState(),
     val entities: Entities = Entities()
 )
 
@@ -53,6 +56,7 @@ val appReducer: Reducer<AppState> = { state, action ->
     AppState(
         counterState = counterReducer(state.counterState, action),
         toDoState = toDoRootReducer(state.toDoState, action),
+        userState = userReducer(state.userState,action),
         entities = entitiesRootReducer(state.entities, action)
     )
 }
