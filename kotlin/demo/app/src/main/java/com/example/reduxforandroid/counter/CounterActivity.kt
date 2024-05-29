@@ -40,7 +40,7 @@ class CounterActivity : AppCompatActivity() {
         binding = ActivityCounterBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-//        storeSubscription = store.subscribe { render(store.state) }
+        storeSubscription = store.subscribe { render(store.state.counterState) }
         /**
          * API 有问题
          *
@@ -50,14 +50,14 @@ class CounterActivity : AppCompatActivity() {
          */
 
 
-        multiSubscription = store.selectors {
-            select({ it.counterState.isLoading }) {
-                binding.loadingIndicator.visibility = if (store.state.counterState.isLoading) View.VISIBLE else View.GONE
-            }
-            select({it.counterState.counter}){
-                binding.txtLabel.text = "Clicked: ${state.counterState.counter} times"
-            }
-        }
+//        multiSubscription = store.selectors {
+//            select({ it.counterState.isLoading }) {
+//                binding.loadingIndicator.visibility = if (store.state.counterState.isLoading) View.VISIBLE else View.GONE
+//            }
+//            select({it.counterState.counter}){
+//                binding.txtLabel.text = "Clicked: ${state.counterState.counter} times"
+//            }
+//        }
 
         binding.btnIncrement.setOnClickListener { store.dispatch(Increment()) }
         binding.btnDecrement.setOnClickListener { store.dispatch(Decrement()) }
@@ -116,7 +116,7 @@ class CounterActivity : AppCompatActivity() {
 
     override fun onDestroy() {
         super.onDestroy()
-//        subscription()
-        multiSubscription()
+        subscription()
+//        multiSubscription()
     }
 }
